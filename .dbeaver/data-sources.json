@@ -1,0 +1,57 @@
+{
+	"folders": {},
+	"connections": {
+		"oracle_thin-171a0db5a1a-29ef8ff79b929702": {
+			"provider": "oracle",
+			"driver": "oracle_thin",
+			"name": "Oracle - xe",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "192.168.0.27",
+				"port": "1521",
+				"database": "xe",
+				"url": "jdbc:oracle:thin:@//192.168.0.27:1521/xe",
+				"home": "C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server",
+				"type": "dev",
+				"properties": {
+					"useFetchSizeWithLongColumn": "true",
+					"loginTimeout": "20"
+				},
+				"provider-properties": {
+					"@dbeaver-always-use-dba-views@": "false",
+					"@dbeaver-sid-service@": "SERVICE",
+					"@dbeaver-meta-use-simple-constraints@": "false",
+					"@dbeaver-use-rule-hint@": "false",
+					"@dbeaver-use-meta-optimizer@": "false",
+					"@dbeaver-connection-type@": "BASIC",
+					"@dbeaver-check-schema-content@": "false",
+					"@dbeaver-meta-use-sys-schema@": "false",
+					"@dbeaver-always-show-dba@": "false"
+				},
+				"handlers": {}
+			}
+		}
+	},
+	"virtual-models": {
+		"oracle_thin-171a0db5a1a-29ef8ff79b929702": {
+			"WEB": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "<diagram version=\"1\" name=\"WEB\" time=\"202004221653\"><entities><data-source id=\"oracle_thin-171a0db5a1a-29ef8ff79b929702\"><entity id=\"1\" name=\"A_LOG\" fq-name=\"WEB.A_LOG\" order=\"0\" x=\"820\" y=\"661\"><path name=\"WEB\"/></entity><entity id=\"2\" name=\"MEMBERSHIP\" fq-name=\"WEB.MEMBERSHIP\" order=\"1\" x=\"505\" y=\"649\"><path name=\"WEB\"/></entity><entity id=\"3\" name=\"NOTICE\" fq-name=\"WEB.NOTICE\" order=\"2\" x=\"1126\" y=\"607\"><path name=\"WEB\"/></entity><entity id=\"4\" name=\"PROVISION\" fq-name=\"WEB.PROVISION\" order=\"3\" x=\"1100\" y=\"352\"><path name=\"WEB\"/></entity><entity id=\"5\" name=\"RESERVE\" fq-name=\"WEB.RESERVE\" order=\"4\" x=\"949\" y=\"383\"><path name=\"WEB\"/></entity><entity id=\"6\" name=\"REVIEW\" fq-name=\"WEB.REVIEW\" order=\"5\" x=\"324\" y=\"570\"><path name=\"WEB\"/></entity><entity id=\"7\" name=\"ROOM\" fq-name=\"WEB.ROOM\" order=\"6\" x=\"590\" y=\"84\"><path name=\"WEB\"/></entity><entity id=\"8\" name=\"ROOMS\" fq-name=\"WEB.ROOMS\" order=\"7\" x=\"144\" y=\"114\"><path name=\"WEB\"/></entity><entity id=\"9\" name=\"ROOM_PHOTO\" fq-name=\"WEB.ROOM_PHOTO\" order=\"8\" x=\"786\" y=\"297\"><path name=\"WEB\"/></entity></data-source></entities><relations><relation name=\"ALOG_EMAIL_FK\" fq-name=\"WEB.A_LOG.ALOG_EMAIL_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"1\"/><relation name=\"RESERVE_EMAIL_FK\" fq-name=\"WEB.RESERVE.RESERVE_EMAIL_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"5\"/><relation name=\"REVEIW_EAMIL_FK\" fq-name=\"WEB.REVIEW.REVEIW_EAMIL_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"6\"/><relation name=\"ROOMPHOTO_ROOMCODE_FK\" fq-name=\"WEB.ROOM_PHOTO.ROOMPHOTO_ROOMCODE_FK\" type=\"fk\" pk-ref=\"7\" fk-ref=\"9\"/><relation name=\"ALOG_RCODE_FK\" fq-name=\"WEB.A_LOG.ALOG_RCODE_FK\" type=\"fk\" pk-ref=\"8\" fk-ref=\"1\"/><relation name=\"RESERVE_RCODE_FK\" fq-name=\"WEB.RESERVE.RESERVE_RCODE_FK\" type=\"fk\" pk-ref=\"8\" fk-ref=\"5\"/><relation name=\"REVIEW_RCODE_FK\" fq-name=\"WEB.REVIEW.REVIEW_RCODE_FK\" type=\"fk\" pk-ref=\"8\" fk-ref=\"6\"/><relation name=\"ROOM_RCODE_FK\" fq-name=\"WEB.ROOM.ROOM_RCODE_FK\" type=\"fk\" pk-ref=\"8\" fk-ref=\"7\"/></relations></diagram>"
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}
